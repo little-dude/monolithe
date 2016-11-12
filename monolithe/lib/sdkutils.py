@@ -195,7 +195,7 @@ class SDKUtils(object):
             m = cls.type_methods_cache[language]
             if not m:
                 return type_name
-            return m(type_name)
+            return m(type_name, sub_type=sub_type)
 
         found, method = load_language_plugins(language, 'get_type_name')
         if found:
