@@ -115,9 +115,6 @@ class SpecificationAttribute(object):
             self.local_name = SDKUtils.get_idiomatic_name_in_language(name=value, language=language)
 
     def from_dict(self, data):
-        """
-
-        """
         try:
             # this must be done before setting the type
             self.subtype = data["subtype"] if "subtype" in data else None
